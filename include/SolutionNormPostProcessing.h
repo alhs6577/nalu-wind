@@ -76,7 +76,7 @@ public:
   int w_;
 
   // percision
-  int percision_;
+  int precision_;
 
   // hold the dofName, functionName in a vector 
   std::vector<std::pair<std::string, std::string> > dofFunctionVec_;

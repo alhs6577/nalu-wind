@@ -136,6 +136,8 @@ DataProbePostProcessing::load(
 
     get_if_present(y_dataProbe, "output_frequency", outputFreq_, outputFreq_);
 
+    get_if_present(y_dataProbe, "precision", precisionvar_, precisionvar_);
+
     get_if_present(y_dataProbe, "begin_sampling_after", previousTime_, previousTime_);
 
     bool sampleInTime = false;
@@ -734,7 +736,7 @@ DataProbePostProcessing::provide_output_txt(
             double * theCoord = (double*)stk::mesh::field_data(*coordinates, node );
             
             // always output time and coordinates
-            myfile << std::left << std::setw(w_) << std::setprecision(precisionvar_) << currentTime << std::setw(w_);
+            myfile << std::left << std::setw(w_) << std::setprecision(precisionvar_) << std::fixed << currentTime << std::setw(w_);
             for ( int jj = 0; jj < nDim; ++jj ) {
               myfile << theCoord[jj] << std::setw(w_);
             }

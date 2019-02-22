@@ -67,7 +67,7 @@ SolutionNormPostProcessing::SolutionNormPostProcessing(
     totalDofCompSize_(0),
     outputFileName_("norms.dat"),
     w_(12),
-    percision_(6)
+    precision_(6)
 {
   // load the data
   load(node);
@@ -105,8 +105,8 @@ SolutionNormPostProcessing::load(
     get_if_present(y_norm, "spacing", w_, w_);
 
     // percision
-    get_if_present(y_norm, "percision", percision_, percision_);
-    get_if_present(y_norm, "precision", percision_, percision_);
+    get_if_present(y_norm, "precision", precision_, precision_);
+    get_if_present(y_norm, "precision", precision_, precision_);
 
 
     // target matches the physics description (see Material model)
@@ -401,7 +401,7 @@ SolutionNormPostProcessing::execute()
       const int fieldSize = sizeOfEachField_[j];
       const std::string dofName = dofField->name();
       for ( int i = 0; i < fieldSize; ++i ) {
-        myfile << std::setprecision(percision_) 
+        myfile << std::setprecision(precision_) 
                << std::setw(w_) 
                << dofName  << "[" << i << "]" << std::setw(w_)
                << timeStepCount << std::setw(w_)

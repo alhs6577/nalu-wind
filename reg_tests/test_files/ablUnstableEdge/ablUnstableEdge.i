@@ -190,6 +190,7 @@ realms:
       search_method: stk_kdtree
       search_tolerance: 1.0e-3
       search_expansion_factor: 2.0
+      precision: 6
 
       lidar_specifications:
         from_target_part: [Unspecified-2-HEX]

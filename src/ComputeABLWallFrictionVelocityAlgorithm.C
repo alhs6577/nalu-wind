@@ -57,9 +57,9 @@ ComputeABLWallFrictionVelocityAlgorithm::ComputeABLWallFrictionVelocityAlgorithm
     gravity_(gravity), 
     alpha_h_(1.0), 
     beta_m_(16.0), 
-    beta_h_(16.0),
+    beta_h_(9.0),
     gamma_m_(5.0),
-    gamma_h_(5.0), 
+    gamma_h_(7.8),
     kappa_(realm.get_turb_model_constant(TM_kappa)),
     maxIteration_(40),
     tolerance_(1.0e-7)

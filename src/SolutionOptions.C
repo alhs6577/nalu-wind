@@ -609,12 +609,12 @@ SolutionOptions::initialize_turbulence_constants()
 {
   // set the default map values; resize to max turbulence model enum
   turbModelConstantMap_[TM_cMu] = 0.09; 
-  turbModelConstantMap_[TM_kappa] = 0.41;
+  turbModelConstantMap_[TM_kappa] = 0.4;
   turbModelConstantMap_[TM_cDESke] = 0.61; 
   turbModelConstantMap_[TM_cDESkw] = 0.78;
   turbModelConstantMap_[TM_tkeProdLimitRatio] = (turbulenceModel_ == SST || turbulenceModel_ == SST_DES) ? 10.0 : 500.0;
-  turbModelConstantMap_[TM_cmuEps] = 0.0856; 
-  turbModelConstantMap_[TM_cEps] = 0.845;
+  turbModelConstantMap_[TM_cmuEps] = 0.0673;
+  turbModelConstantMap_[TM_cEps] = 0.93;
   turbModelConstantMap_[TM_betaStar] = 0.09;
   turbModelConstantMap_[TM_aOne] = 0.31;
   turbModelConstantMap_[TM_betaOne] = 0.075;
